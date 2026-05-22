@@ -49,8 +49,8 @@ export default function Gallery() {
                 <span className="text-brand-blue font-avenue text-5xl font-black">+900</span>
                 <span className="text-brand-blue/40 text-[9px] font-sans font-black uppercase tracking-widest">Instalações</span>
               </div>
-              <div className="w-20 h-20 border-2 border-brand-blue/10 border-t-brand-blue rounded-full flex items-center justify-center animate-spin-slow">
-                 <img src="favicon.png" alt="Logo" className="w-10 h-10 object-contain -rotate-45" />
+              <div className="w-20 h-20 border-2 border-brand-blue/10 border-t-brand-blue rounded-full flex items-center justify-center">
+                 <img src="favicon.png" alt="Logo" className="w-10 h-10 object-contain" />
               </div>
             </motion.div>
           </div>

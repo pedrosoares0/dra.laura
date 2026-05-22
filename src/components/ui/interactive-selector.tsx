@@ -96,6 +96,7 @@ const InteractiveSelector = () => {
                 backgroundImage: `url('${option.image}')`,
                 transform: activeIndex === index ? 'scale(1)' : 'scale(1.1)',
               }}
+              loading="lazy"
             />
 
             {/* Overlay Gradient */}

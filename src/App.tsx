@@ -7,6 +7,7 @@ import Stats from './components/Stats'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import SmoothScroll from './components/ui/smooth-scroll'
+import ImagePreloader from './components/ui/image-preloader'
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -22,26 +23,28 @@ const sectionVariants = {
 
 function App() {
   return (
-    <main className="min-h-screen bg-white text-brand-blue antialiased relative">
-      <SmoothScroll />
-      <Hero />
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
-        <Partners />
-      </motion.div>
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
-        <Gallery />
-      </motion.div>
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
-        <Catalogue />
-      </motion.div>
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
-        <Stats />
-      </motion.div>
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
-        <FAQ />
-      </motion.div>
-      <Footer />
-    </main>
+    <ImagePreloader>
+      <main className="min-h-screen bg-white text-brand-blue antialiased relative">
+        <SmoothScroll />
+        <Hero />
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
+          <Partners />
+        </motion.div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
+          <Gallery />
+        </motion.div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
+          <Catalogue />
+        </motion.div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
+          <Stats />
+        </motion.div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={sectionVariants}>
+          <FAQ />
+        </motion.div>
+        <Footer />
+      </main>
+    </ImagePreloader>
   )
 }
 
