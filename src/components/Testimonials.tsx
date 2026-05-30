@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ROW1_IMAGES = [
   { src: './assets/images/laura (35).webp', alt: 'Procedimento clínico estético' },
   { src: './assets/images/bento (1).jpeg', alt: 'Espaço Dra. Laura' },
-  { src: './assets/images/IMG_1527.JPG', alt: 'Caso Clínico Resina Composta' },
+  { src: './assets/images/IMG_1527.webp', alt: 'Caso Clínico Resina Composta' },
   { src: './assets/images/protese.jpg', alt: 'Cuidado e biossegurança de ponta' },
   { src: './assets/images/sentada.jpg', alt: 'Dra. Laura Laytynher' },
   { src: './assets/images/resultado2.webp', alt: 'Sorriso finalizado com naturalidade' },

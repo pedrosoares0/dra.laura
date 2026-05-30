@@ -20,7 +20,7 @@ export default function App() {
     const savedTheme = localStorage.getItem('theme_v2');
     return savedTheme && ['light', 'dark-blue'].includes(savedTheme)
       ? savedTheme
-      : 'dark-blue'; // Safira is default
+      : 'light'; // Pérola (light) is default
   });
 
   // Apply theme class to body for CSS variable shifting
