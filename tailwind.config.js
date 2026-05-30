@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: "class",
+  darkMode: ["class", ".dark-blue"],
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,19 +8,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          blue: '#0732C1',
-          secondaryBlue: '#1371F9',
-          lightBlue: '#80C2FD',
-          white: '#ffffff',
-          darkBlue: '#02081F',
-          darkCard: '#081135',
+        dental: {
+          bg: 'var(--bg)',
+          bgAlt: 'var(--bg-alt)',
+          ink: 'var(--ink)',
+          gold: 'var(--gold)',
+          goldSoft: 'var(--gold-soft)',
+          surface: 'var(--surface)',
+          cardBg: 'var(--card-bg)',
+          lineSoft: 'var(--line-soft)',
+          muted: 'var(--muted)',
+          mutedSoft: 'var(--muted-soft)',
         }
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        avenue: ['Avenue', 'sans-serif'],
-        behind: ['BehindTheNineties', 'cursive'],
+        display: ['BehindTheNineties', 'cursive'],
         inter: ['Inter', 'sans-serif'],
       },
       animation: {

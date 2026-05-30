@@ -3,24 +3,70 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Avenue';
-  src: url('/toinho-redes-landing/fonts/AvenueRegular-R9e2M.otf') format('opentype');
+  font-family: 'BehindTheNineties';
+  src: url('/fonts/BehindTheNineties.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'BehindTheNineties';
-  src: url('/toinho-redes-landing/fonts/BehindTheNineties.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+:root {
+  /* Pérola (Default Light Theme) */
+  --bg: #F7F1ED;
+  --bg-alt: #ebdcd3;
+  --ink: #193C70;
+  --muted: rgba(25, 60, 112, 0.78);
+  --muted-soft: rgba(25, 60, 112, 0.62);
+  --line-soft: rgba(25, 60, 112, 0.12);
+  --gold: #c6a072;
+  --gold-soft: #d8b58a;
+  --surface: #F7F1ED;
+  --card-bg: #ffffff;
+  --navbar-bg: rgba(247, 241, 237, 0.85);
+  --navbar-border: rgba(25, 60, 112, 0.1);
 }
+
+.dark-blue {
+  /* Safira (Dark Blue Theme) */
+  --bg: #142A4F;
+  --bg-alt: #132f54;
+  --ink: #FCF8F5;
+  --muted: #e0d8cf;
+  --muted-soft: #c2b5a8;
+  --line-soft: rgba(255, 255, 255, 0.12);
+  --gold: #D8B693;
+  --gold-soft: #D8B693;
+  --surface: #142A4F;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --navbar-bg: rgba(27, 64, 112, 0.85);
+  --navbar-border: rgba(255, 255, 255, 0.08);
+}
+
 
 html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  background-color: var(--bg);
+  color: var(--ink);
+  /* Smooth transitions for high-end feel during theme switches */
+  transition: background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              color 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Apply transition to important structural elements */
+header, footer, section, nav, div, p, span, h1, h2, h3, a, blockquote, button {
+  transition: background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              color 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Custom Scrollbar */
@@ -29,40 +75,138 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--bg-alt);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0732C1;
-  border-radius: 5px;
+  background: var(--gold);
+  border-radius: 999px;
+  border: 2px solid var(--bg);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1371F9;
+  background: var(--gold-soft);
 }
 
-:root {
-  background-color: #ffffff;
-  color: #1a1a1a;
+/* Lenis scroll classes support */
+html.lenis, html.lenis body {
+  height: auto;
 }
 
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
 }
 
-@layer utilities {
-  .animate-star-btn {
-    animation: star-btn 3s linear infinite;
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Ambient luxury floating blobs */
+@keyframes float-blob-1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
   }
 }
 
-@keyframes star-btn {
-  0% {
-    offset-distance: 0%;
+@keyframes float-blob-2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1.05);
   }
-  100% {
-    offset-distance: 100%;
+  50% {
+    transform: translate(-40px, 40px) scale(0.9);
   }
 }
+
+@keyframes float-blob-3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(0.95);
+  }
+  40% {
+    transform: translate(40px, -30px) scale(1.15);
+  }
+}
+
+.animate-blob-1 {
+  animation: float-blob-1 20s infinite ease-in-out;
+}
+
+.animate-blob-2 {
+  animation: float-blob-2 25s infinite ease-in-out;
+}
+
+.animate-blob-3 {
+  animation: float-blob-3 22s infinite ease-in-out;
+}
+
+/* Instagram Stories 3-segment progress animations (15s total cycle) */
+@keyframes story-bar-0 {
+  0% { width: 0%; }
+  33.33% { width: 100%; }
+  100% { width: 100%; }
+}
+
+@keyframes story-bar-1 {
+  0% { width: 0%; }
+  33.33% { width: 0%; }
+  66.66% { width: 100%; }
+  100% { width: 100%; }
+}
+
+@keyframes story-bar-2 {
+  0% { width: 0%; }
+  66.66% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-story-bar-0 {
+  animation: story-bar-0 15s linear infinite;
+}
+
+.animate-story-bar-1 {
+  animation: story-bar-1 15s linear infinite;
+}
+
+.animate-story-bar-2 {
+  animation: story-bar-2 15s linear infinite;
+}
+
+/* Subtle premium grain noise overlay */
+.bg-grain-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.022'/%3E%3C/svg%3E");
+}
+
+/* Watermark background class */
+.hero-watermark {
+  background-image: url('/assets/images/icconfundo.webp');
+  opacity: 0.22;
+  mix-blend-mode: normal;
+}
+
+.dark-blue .hero-watermark {
+  filter: brightness(0) invert(1);
+  opacity: 0.024;
+  mix-blend-mode: screen;
+}
+
+/* Section intro blur-reveal — initial hidden state; GSAP animates to visible */
+.section-intro-hidden {
+  opacity: 0;
+  transform: translateY(32px);
+  filter: blur(14px);
+  will-change: opacity, transform, filter;
+}
+
