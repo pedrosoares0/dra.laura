@@ -3,7 +3,6 @@
 
 # Dra. Laura Laytynher — Landing Page
 🔗 [Acesse aqui](https://dralaura.netlify.app/)  
-⚠️ **Melhor visualização no mobile – responsividade ainda em desenvolvimento.**
 
 > **Um espaço digital que reflete a essência de um atendimento humanizado e de excelência.**
 
