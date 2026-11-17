@@ -1,4 +1,3 @@
-# MOBILE FIRST
 
 <br>
 
