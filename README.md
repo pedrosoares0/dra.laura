@@ -1,7 +1,4 @@
 # MOBILE FIRST
-<div align="center">
-  <img src="./assets/images/capareadme.png" alt="Capa do projeto Dra. Laura Laytynher" width="100%">
-</div>
 
 <br>
 
@@ -37,36 +34,9 @@ A Dra. Laura Laytynher atua com foco em:
 <br>
 <br>
 
-<details>
-<summary><strong>🛠️ Informações Técnicas (Para Desenvolvedores)</strong></summary>
-<br>
-
-Este projeto foi construído utilizando tecnologias modernas de desenvolvimento web focado em alta performance, semântica e animações fluidas de nível premium.
-
 ### Tecnologias Utilizadas
 *   **React (TypeScript):** Componentização e controle de estados robustos.
 *   **Vite:** Tooling ultrarrápido para desenvolvimento e empacotamento otimizado de produção.
 *   **Tailwind CSS:** Estilização modular com suporte integrado a temas e variáveis de CSS nativas para alternância de modo Safira/Pérola.
 *   **GSAP (GreenSock) + ScrollTrigger:** Animações premium com alta taxa de quadros e efeitos de revelação por desfoque e cortina baseados no scroll.
 *   **Framer Motion:** Micro-interações leves e fluidas.
-
-### Como Rodar o Projeto Localmente
-
-1.  **Clone o repositório:**
-    ```bash
-    git clone https://github.com/pedrosoares0/dra.laura.git
-    ```
-2.  **Acesse a pasta do projeto:**
-    ```bash
-    cd dra.laura
-    ```
-3.  **Instale as dependências:**
-    ```bash
-    npm install
-    ```
-4.  **Execute o servidor de desenvolvimento:**
-    ```bash
-    npm run dev
-    ```
-
-</details>
